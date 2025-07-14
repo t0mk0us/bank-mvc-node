@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>Customer List</title></head>
+<body>
+  <h1>All Customers</h1>
+  <a href="/customer/new">Add New Customer</a>
+  <ul>
+    <% customer.forEach(customer => { %>
+      <li>
+        <a href="/customer/<%= customer.id %>">
+          <%= customer.firstName %> 
+          <%= customer.lastName %> 
+          (<%= customer.gender %>)
+          (<%= customer.dateOfBirth %>)
+          (<%= customer.addressID %>)
+          (<%= customer.email %>)
+          (<%= customer.preferedLanguage %>)
+        </a>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>
