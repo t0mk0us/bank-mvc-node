@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Currencies List</title></head>
+<body>
+  <h1>All Currencies</h1>
+  <a href="/currency/new">Add New Currency</a>
+  <ul>
+    <% currency.forEach(address => { %>
+      <li>
+        <a href="/currency/<%= currency.id %>">
+          <%= currency.name %> 
+          (<%= currency.symbol %>)
+        </a>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>

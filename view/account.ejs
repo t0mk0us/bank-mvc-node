@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Account List</title></head>
+<body>
+  <h1>All Accounts</h1>
+  <a href="/account/new">Add New Account</a>
+  <ul>
+    <% account.forEach(account => { %>
+      <li>
+        <a href="/account/<%= account.id %>">
+          <%= account.customerID %> 
+          (<%= account.currencyID %>)
+          (<%= account.amount %>)
+        </a>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>

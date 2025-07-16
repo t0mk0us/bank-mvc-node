@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>Address List</title></head>
+<body>
+  <h1>All Addresses</h1>
+  <a href="/address/new">Add New Address</a>
+  <ul>
+    <% address.forEach(address => { %>
+      <li>
+        <a href="/address/<%= address.id %>">
+          <%= address.streetNumber %> 
+          <%= address.street %> 
+          <%= address.unitNumber %> 
+          <%= address.city %> 
+          <%= address.province %> 
+          (<%= address.country %>)
+        </a>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>
