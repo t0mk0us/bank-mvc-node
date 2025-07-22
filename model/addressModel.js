@@ -2,10 +2,6 @@ const { DataTypes } = require("sequelize");
 const sequelize = require("../config/db");
 
 const Address = sequelize.define("Address", {
-  ID: {
-    type: DataTypes.BIGINT,
-    allowNull: false,
-  },
     customerID: {
     type: DataTypes.BIGINT,
     allowNull: false,
@@ -27,6 +23,10 @@ const Address = sequelize.define("Address", {
     allowNull: false,
   },
   province: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  ostalCode: {
     type: DataTypes.STRING,
     allowNull: false,
   },

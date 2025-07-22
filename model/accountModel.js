@@ -2,15 +2,11 @@ const { DataTypes } = require("sequelize");
 const sequelize = require("../config/db");
 
 const Account = sequelize.define("Account", {
-  ID: {
-    type: DataTypes.BIGINT,
-    allowNull: false,
-  },
     customerID: {
     type: DataTypes.BIGINT,
     allowNull: false,
   },
-  amount: {
+  balance: {
     type: DataTypes.DOUBLE,
     allowNull: false,
   },
